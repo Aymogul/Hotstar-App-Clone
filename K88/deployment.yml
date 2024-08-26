@@ -9,7 +9,7 @@ spec:
     matchLabels:
       app: hotstar
   template:
-    metadata:
+    metadata:       # snip block 
       labels:
         app: hotstar
     spec:
