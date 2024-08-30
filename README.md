@@ -24,3 +24,22 @@ git clone https://github.com/Aymogul/Hotstar-App-Clone.git
 - Code Quality Assurance: SonarQube is used to perform thorough code analysis, ensuring only high-quality code is deployed.
 
 - Scalable and Resilient Deployment: Kubernetes is used to deploy the application, providing high availability, scalability, and self-healing capabilities.
+
+## Overview
+This project showcases a modern CI/CD workflow that combines the power of Jenkins, Docker, Docker Scout, SonarQube, and Kubernetes to deliver a secure, scalable, and efficient deployment of the Hotstar app. It is ideal for teams looking to implement robust DevOps practices and automate their deployment pipelines.
+
+## Step-by-Step Deployment Process
+
+### Step 1: Setting up AWS EC2 Instance
+- Creating an EC2 instance with Ubuntu AMI, t2.large, and 30 GB storage
+- Assigning an IAM role with Admin access for learning purposes
+
+### Step 2: Installation of Required Tools on the Instance
+Writing a script to automate the installation of:
+- Docker
+- Jenkins
+- Java
+- SonarQube container
+- AWS CLI
+- Kubectl
+- Terraform
