@@ -1,1 +1,2 @@
-# Hotstar-App-Clone
+# Hotstar App Deployment Using Kubernetes with CI/CD Pipeline
+
