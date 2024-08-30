@@ -1,6 +1,6 @@
 # Hotstar App Deployment Using Kubernetes with CI/CD Pipeline
 
-![image](./images/project-diagram.PNG)
+![dcn-zaacs](./images/project-diagram.PNG)
 
 This project demonstrates the deployment of the Hotstar application on a Kubernetes cluster using a CI/CD pipeline orchestrated by Jenkins. The pipeline is designed to automate the entire process of building, testing, securing, and deploying the Hotstar app, ensuring a robust and reliable deployment workflow.
 
