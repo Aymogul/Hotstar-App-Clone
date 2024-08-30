@@ -15,3 +15,12 @@ git clone https://github.com/Aymogul/Hotstar-App-Clone.git
 - Familiarity with Docker, Jenkins, Java, SonarQube, AWS - CLI 
 - Kubectl
 - Terraform and Docker Scout
+
+## Project Highlights:
+- Automated Build and Deployment: The pipeline automatically builds the Docker image for the Hotstar app, tags it, and pushes it to Docker Hub.
+
+- Security and Vulnerability Scanning: Docker Scout is integrated to perform security checks on Docker images to identify vulnerabilities and provide recommendations for improvement.
+
+- Code Quality Assurance: SonarQube is used to perform thorough code analysis, ensuring only high-quality code is deployed.
+
+- Scalable and Resilient Deployment: Kubernetes is used to deploy the application, providing high availability, scalability, and self-healing capabilities.
