@@ -95,3 +95,23 @@ Creating Jenkins jobs for:
 ### STEP 1B: IAM ROLE
 Search for IAM in the search bar of AWS and click on roles.
 ![alt image](/images/role-a.PNG)
+
+Click on Create Role
+![text](/images/role-b.PNG)
+
+Select entity type as AWS service
+
+Use case as EC2 and click on Next.
+![text](/images/role-c.PNG)
+
+For permission policy select Administrator Access (Just for learning purpose), click Next.
+
+![text](/images/role-d.PNG)
+Provide a Name for Role and click on Create role.
+
+Now Attach this role to Ec2 instance that we created earlier, so we can provision cluster from that instance.
+
+Go to EC2 Dashboard and select the instance.
+
+Click on Actions –> Security –> Modify IAM role.
+![text](/)
