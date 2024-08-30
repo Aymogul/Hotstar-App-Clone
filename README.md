@@ -249,3 +249,10 @@ Update New password.
 This is Sonar Dashboard.
 ![text](/images/soanr-dashboard.PNG)
 
+check for the version of things installed 
+```sh
+docker --version
+aws --version
+terraform --version
+kubectl version
+```
