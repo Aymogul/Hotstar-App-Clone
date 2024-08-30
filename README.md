@@ -43,3 +43,16 @@ Writing a script to automate the installation of:
 - AWS CLI
 - Kubectl
 - Terraform
+
+### Step 3: Jenkins Job Configuration
+Creating Jenkins jobs for:
+- Creating an EKS cluster
+- Deploying the Hotstar clone application
+- Configuring the Jenkins job stages:
+- Sending files to SonarQube for static code analysis
+- Running npm install
+- Implementing OWASP for security checks
+- Installing and running Docker Scout for container security
+- Scanning files and Docker images with Docker Scout
+- Building and pushing Docker images
+- Deploying the application to the EKS cluster
