@@ -205,4 +205,17 @@ Start a sonarqube container with the following command:
 sudo chmod 777 /var/run/docker.sock
 docker run -d --name sonar -p 9000:9000 sonarqube:lts-community
 ```
+Create an EC2 on the AWS console
+![text](/images/ec2.PNG)
+
+Copy the ec2 public address and map it to the jenkins server on port 8080
+```sh
+<ec2 ip address:8080> # login to jenkins page
+```
+![text](/images/jenkins-login-page.PNG)
+
+Connect your Instance to Putty or Mobaxtreme and provide the below command for the Administrator password
+```sh
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+```
 
