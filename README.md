@@ -109,9 +109,64 @@ For permission policy select Administrator Access (Just for learning purpose), c
 ![text](/images/role-d.PNG)
 Provide a Name for Role and click on Create role.
 
+![text](/images/iam-b.PNG)
+Role is created
+
 Now Attach this role to Ec2 instance that we created earlier, so we can provision cluster from that instance.
 
 Go to EC2 Dashboard and select the instance.
 
 Click on Actions –> Security –> Modify IAM role.
-![text](/)
+![text](/images/iam-a.PNG)
+
+Select the role you created earlier
+![text](/images/iam-b.PNG)
+
+### Step 2: Installation of Required Tools on the Instance
+Scripts to install Required tools
+
+```sh
+sudo su
+nano script1.sh
+```
+Cretion of installation script for;Java, Jenkins, Docker
+
+```sh
+#!/bin/bash
+sudo apt update -y
+wget -O - https://packages.adoptium.net/artifactory/api/gpg/key/public | tee /etc/apt/keyrings/adoptium.asc
+echo "deb [signed-by=/etc/apt/keyrings/adoptium.asc] https://packages.adoptium.net/artifactory/deb $(awk -F= '/^VERSION_CODENAME/{print$2}' /etc/os-release) main" | tee /etc/apt/sources.list.d/adoptium.list
+sudo apt update -y
+sudo apt install temurin-17-jdk -y
+/usr/bin/java --version
+curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key | sudo tee /usr/share/keyrings/jenkins-keyring.asc > /dev/null
+echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] https://pkg.jenkins.io/debian-stable binary/ | sudo tee /etc/apt/sources.list.d/jenkins.list > /dev/null
+sudo apt-get update -y
+sudo apt-get install jenkins -y
+sudo systemctl start jenkins
+#install docker
+# Add Docker's official GPG key:
+sudo apt-get update
+sudo apt-get install ca-certificates curl gnupg -y
+sudo install -m 0755 -d /etc/apt/keyrings
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+sudo chmod a+r /etc/apt/keyrings/docker.gpg
+# Add the repository to Apt sources:
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+sudo apt-get update
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
+sudo usermod -aG docker ubuntu
+newgrp docker
+```
+Add this permission before running the script
+
+```sh
+sudo chmod 777 script1.sh
+sh script1.sh
+```
+
+
+
