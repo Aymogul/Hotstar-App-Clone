@@ -218,4 +218,34 @@ Connect your Instance to Putty or Mobaxtreme and provide the below command for t
 ```sh
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 ```
+![test](/images/jen-pasword.PNG)
+
+Install suggested plugins
+![text](/images/Cus-jenkins.PNG)
+
+Jenkins will now get installed and install all the libraries.
+
+Create an admin user
+![text](/images/jenjins-admin-user.PNG)
+
+Click on save and continue.
+
+Jenkins Dashboard
+![text](/images/jen-dashboard.PNG)
+
+Now Copy the public IP again and paste it into a new tab in the browser with 9000
+```sh
+<ec2-ip:9000>  #runs sonar container
+```
+![alt](/images/sonar-login.PNG)
+
+Enter username and password, click on login and change password
+```sh
+username admin
+password admin
+```
+![alt](/images/sonar-update%20user.PNG)
+Update New password.
+This is Sonar Dashboard.
+![text](/images/soanr-dashboard.PNG)
 
