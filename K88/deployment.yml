@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: hotstar
-        image: sevenajay/hotstar:latest
+        image: aymogul/hotstar:latest
         ports:
         - containerPort: 3000  # Port your application listens on
