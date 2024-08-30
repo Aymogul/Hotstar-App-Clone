@@ -167,6 +167,42 @@ Add this permission before running the script
 sudo chmod 777 script1.sh
 sh script1.sh
 ```
+script 2 for the installation of Terraform, Kubectl, Aws cli
 
+```sh
+nano script2.sh
+```
+Add the following code
+```sh
+#!/bin/bash
+#install terraform
+sudo apt install wget -y
+wget -O- https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg
+echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
+sudo apt update && sudo apt install terraform
+#install Kubectl on Jenkins
+sudo apt update
+sudo apt install curl -y
+curl -LO https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl
+sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+kubectl version --client
+#install Aws cli
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+sudo apt-get install unzip -y
+unzip awscliv2.zip
+sudo ./aws/install
+```
+Add this permission before running the script
 
+```sh
+sudo chmod 777 script1.sh
+sh script1.sh
+```
+
+Start a sonarqube container with the following command:
+
+```sh
+sudo chmod 777 /var/run/docker.sock
+docker run -d --name sonar -p 9000:9000 sonarqube:lts-community
+```
 
