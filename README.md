@@ -91,3 +91,7 @@ Creating Jenkins jobs for:
 - A pop-up will prompt you to select or create a key pair. Choose an existing key pair or create a new one.
 - Finally, click on “Launch Instances.”
 11. Accessing the Instance: Once the instance is launched, you can connect to it using SSH. Use the private key associated with the selected key pair to connect to the instance’s public IP or DNS address.
+
+### STEP 1B: IAM ROLE
+Search for IAM in the search bar of AWS and click on roles.
+![alt image](/images/role-a.PNG)
