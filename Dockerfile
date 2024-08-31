@@ -1,3 +1,5 @@
+# This is a comprehensive dockerfile to containerize this app 
+
 
 # Use Node.js Alpine base image
 FROM node:alpine
